@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <!-- LOGO COMO BOTÓN AL INICIO -->
         <div class="logo">
           <a href="index.html">
-            <img src="../imagenes_del_menu/logo.jpeg" alt="Logo Supermercado">
+            <img src="../imagenes_en_general/imagenes_del_menu/logo.jpeg" alt="Logo Supermercado">
           </a>
         </div>
 

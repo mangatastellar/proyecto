@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/headerymenuyfooter.css">
+    <link rel="stylesheet" href="../css/productostargeta.css">
+     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="../css/categorias.css">
+</head>
+
+<body>
+
+    <!-- Menú Lateral -->
+    <div id="menuLateral" class="menu-lateral">
+        <span class="cerrar-menu" id="btnCerrar">×</span>
+        
+        <h2>Menú</h2>
+        
+        <div class="opcion-menu" id="btnMetodoEntrega">
+            <span>Métodos de entrega</span>
+            <span>❯</span>
+        </div>
+        
+        <div class="opcion-menu" id="btnAbrirModal">
+            <span>Método de pago / Envío</span>
+            <span>❯</span>
+        </div>
+
+        <div class="opcion-menu">
+            <a href="favoritos.html">Favoritos</a>
+        </div>
+
+        <!-- Botón de categorías dentro del menú lateral -->
+        <div class="opcion-menu" id="btnCategorias">
+            <span class="categorias-titulo">Categorías</span>
+            <span>❯</span>
+        </div>
+
+        <div class="otros-servicios">
+            <h3>Otros servicios</h3>
+            <div class="servicio">
+                <i class="fa-solid fa-store"></i> Sucursales
+            </div>
+            <div class="servicio">
+                <i class="fa-solid fa-envelope"></i> Contacto
+            </div>
+            <div class="servicio">
+                <i class="fa-solid fa-phone"></i> 245XXXX
+            </div>
+            <div class="servicio">
+                <i class="fa-brands fa-whatsapp"></i> Contacto por WhatsApp
+            </div>
+            <div class="servicio">
+                <i class="fa-solid fa-clock"></i> Horarios de Atención<br>
+                <small>Lunes a Viernes de 9 a 18 hs</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- EL MEGA MENÚ DESPLEGABLE (Ubicado estratégicamente para flotar al costado) -->
+    <div id="megaMenuCategorias" class="menu-overlay">
+        <div class="mega-menu-contenido">
+            <span class="cerrar-mega-menu" id="cerrarMegaMenu">&times;</span>
+            
+            <h2><i class="fa-solid fa-store" style="color: #3d57c7;"></i> Explorá nuestras Categorías</h2>
+
+            <!-- Grilla de categorías -->
+            <div class="grid-categorias">
+                
+                <!-- Categoría 1 -->
+                <div class="categoria-item">
+                    <h3><i class="fa-solid fa-tv"></i> Electro y tecnología</h3>
+                    <ul>
+                        <li>Smart TV y Soportes</li>
+                        <li>Celulares y Accesorios</li>
+                        <li>Climatización (Aires y Estufas)</li>
+                    </ul>
+                </div>
+
+                <!-- Categoría 2 -->
+                <div class="categoria-item">
+                    <h3><i class="fa-solid fa-basket-shopping"></i> Almacén</h3>
+                    <ul>
+                        <li>Aceites y Vinagres</li>
+                        <li>Arroz y Legumbres</li>
+                        <li>Fideos y Panificados</li>
+                    </ul>
+                </div>
+
+                <!-- Categoría 3 -->
+                <div class="categoria-item">
+                    <h3><i class="fa-solid fa-carrot"></i> Verdulería</h3>
+                    <ul>
+                        <li>Frutas frescas</li>
+                        <li>Verduras de hoja</li>
+                        <li>Tubérculos y Raíces</li>
+                    </ul>
+                </div>
+
+                <!-- Categoría 4 -->
+                <div class="categoria-item">
+                    <h3><i class="fa-solid fa-snowflake"></i> Congelados</h3>
+                    <ul>
+                        <li>Pizzas y Empanadas</li>
+                        <li>Hamburguesas y Medallones</li>
+                        <li>Verduras congeladas</li>
+                    </ul>
+                </div>
+
+                <!-- Categoría 5 -->
+                <div class="categoria-item">
+                    <h3><i class="fa-solid fa-wine-glass"></i> Bebidas</h3>
+                    <ul>
+                        <li>Gaseosas y Aguas</li>
+                        <li>Cervezas y Vinos</li>
+                        <li>Jugos e Isotónicos</li>
+                    </ul>
+                </div>
+
+                <!-- Categoría 6 -->
+                <div class="categoria-item">
+                    <h3><i class="fa-solid fa-pump-soap"></i> Limpieza</h3>
+                    <ul>
+                        <li>Cuidado de la ropa (Jabones)</li>
+                        <li>Limpieza de pisos y baños</li>
+                        <li>Papeles y Servilletas</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Encabezado inyectado automáticamente por JS -->
+    <header></header>
+
+
+    <!-- Contenido Principal -->
+    <main>
+       <!-- CARRUSEL CON FLECHAS AFUERA Y PUNTOS ABAJO -->
+        <div class="carrusel-exterior">
+            
+            <!-- Botón Izquierda Afuera -->
+            <button class="carrusel-flecha flecha-izquierda" id="btnPrev">&#10094;</button>
+
+            <!-- Contenedor Central (Banner cuadrado/rectangular) -->
+            <div class="carrusel-contenedor" id="carruselContenedor">
+                <div class="carrusel-pista" id="carruselPista">
+                    <div class="carrusel-slide">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Banner 1">
+                    </div>
+                    <div class="carrusel-slide">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05" alt="Banner 2">
+                    </div>
+                    <div class="carrusel-slide">
+                        <img src="https://images.unsplash.com/photo-1426604966848-d7adac902bff" alt="Banner 3">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Derecha Afuera -->
+            <button class="carrusel-flecha flecha-derecha" id="btnNext">&#10095;</button>
+
+            <!-- Círculos Indicadores abajo -->
+            <div class="carrusel-indicadores" id="carruselIndicadores">
+                <!-- Se generan solos con JavaScript -->
+            </div>
+        </div>
+       <!-- Barra de Beneficios / Trust Badges -->
+<section class="trust-badges-container">
+    <div class="trust-badge">
+        <div class="trust-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <div class="trust-text">
+            <strong>Envíos a domicilio</strong>
+            <span>En el día</span>
+        </div>
+    </div>
+    <div class="trust-badge">
+        <div class="trust-icon">
+            <i class="fa-solid fa-credit-card"></i>
+        </div>
+        <div class="trust-text">
+            <strong>Cuotas sin interés</strong>
+            <span>Medios de pago seguros</span>
+        </div>
+    </div>
+    <div class="trust-badge">
+        <div class="trust-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div class="trust-text">
+            <strong>Compra 100% protegida</strong>
+            <span>Garantía asegurada</span>
+        </div>
+    </div>
+</section>
+<!-- Secciones en columna (Verticales) -->
+<div class="main-sections-container">
+
+    <!-- 1. Banner Mes de Ofertas -->
+    <section class="store-section banner-mes-section">
+        <div class="banner-mes-content">
+            <h2>Mes de Ofertas Especiales 🎉</h2>
+            <p>¡Aprovecha descuentos imperdibles durante todo el mes en productos seleccionados!</p>
+            <a href="#" class="btn-section">Ver ofertas del mes</a>
+        </div>
+    </section>
+
+    <!-- 2. Descuentos con tarjeta -->
+    <section class="store-section">
+        <div class="section-header">
+            <h3>Descuentos con tarjeta (Nombre del Banco/Tarjeta)</h3>
+            <a href="#" class="ver-todos">Ver todos</a>
+        </div>
+        <div class="cards-grid">
+            <!-- Aquí puedes replicar la estructura de productos que ya tienes en "Ofertas" -->
+            <div class="mini-card">
+                <span class="badge-discount">30% OFF</span>
+                <div class="card-img-placeholder">💳</div>
+                <h4>Promo Banco X</h4>
+                <p>Hasta 3 cuotas sin interés</p>
+            </div>
+            <div class="mini-card">
+                <span class="badge-discount">20% OFF</span>
+                <div class="card-img-placeholder">💳</div>
+                <h4>Promo Tarjeta Y</h4>
+                <p>Todos los miércoles</p>
+            </div>
+            <div class="mini-card">
+                <span class="badge-discount">15% OFF</span>
+                <div class="card-img-placeholder">💳</div>
+                <h4>Beneficio App</h4>
+                <p>Pagando con QR</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Más vendidos -->
+    <section class="store-section">
+        <div class="section-header">
+            <h3>Más vendidos 🔥</h3>
+            <a href="#" class="ver-todos">Ver todos</a>
+        </div>
+        <div class="cards-grid">
+            <div class="mini-card">
+                <div class="card-img-placeholder">🛒</div>
+                <h4>Producto Popular 1</h4>
+                <span class="price">$4.500</span>
+                <button class="btn-add">Agregar</button>
+            </div>
+            <div class="mini-card">
+                <div class="card-img-placeholder">🛒</div>
+                <h4>Producto Popular 2</h4>
+                <span class="price">$8.200</span>
+                <button class="btn-add">Agregar</button>
+            </div>
+            <div class="mini-card">
+                <div class="card-img-placeholder">🛒</div>
+                <h4>Producto Popular 3</h4>
+                <span class="price">$3.100</span>
+                <button class="btn-add">Agregar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Destacados de la semana -->
+    <section class="store-section">
+        <div class="section-header">
+            <h3>Destacados de la semana ⭐</h3>
+            <a href="#" class="ver-todos">Ver todos</a>
+        </div>
+        <div class="cards-grid">
+            <div class="mini-card">
+                <div class="card-img-placeholder">🌟</div>
+                <h4>Destacado 1</h4>
+                <span class="price">$6.000</span>
+                <button class="btn-add">Agregar</button>
+            </div>
+            <div class="mini-card">
+                <div class="card-img-placeholder">🌟</div>
+                <h4>Destacado 2</h4>
+                <span class="price">$9.500</span>
+                <button class="btn-add">Agregar</button>
+            </div>
+            <div class="mini-card">
+                <div class="card-img-placeholder">🌟</div>
+                <h4>Destacado 3</h4>
+                <span class="price">$5.000</span>
+                <button class="btn-add">Agregar</button>
+            </div>
+        </div>
+    </section>
+
+</div>
+</section>
+        <section id="oferta">
+            <h1>Ofertas</h1>
+           <div class="productos">
+    <!-- TARJETA 1 -->
+    <div class="card" onclick="verProducto('Cocacola 500mL')">
+        <button class="btn-favorito" title="Guardar en favoritos" onclick="event.stopPropagation();">
+            <i class="fa-regular fa-heart"></i>
+        </button>
+        <img src="../imagenes_en_general/imagenes_de_ofertas/coca.jpeg" alt="Coca Cola">
+        <h2>Cocacola 500mL</h2>
+        <div class="precio">$5,000</div>
+        <div class="viejo">$6,850</div>
+        <button class="btn-carrito" onclick="event.stopPropagation();">
+            <i class="fa-solid fa-cart-shopping"></i> Agregar
+        </button>
+    </div>
+
+    <!-- TARJETA 2 -->
+    <div class="card" onclick="verProducto('Pepsi 1,5L')">
+        <button class="btn-favorito" title="Guardar en favoritos" onclick="event.stopPropagation();">
+            <i class="fa-regular fa-heart"></i>
+        </button>
+        <img src="../imagenes_en_general/imagenes_de_ofertas/pepsi.jpeg" alt="Pepsi">
+        <h2>Pepsi 1,5L</h2>
+        <div class="precio">$7,000</div>
+        <div class="viejo">$8,500</div>
+        <button class="btn-carrito" onclick="event.stopPropagation();">
+            <i class="fa-solid fa-cart-shopping"></i> Agregar
+        </button>
+    </div>
+
+    <!-- TARJETA 3 -->
+    <div class="card" onclick="verProducto('Sprite 1,5L')">
+        <button class="btn-favorito" title="Guardar en favoritos" onclick="event.stopPropagation();">
+            <i class="fa-regular fa-heart"></i>
+        </button>
+        <img src="../imagenes_en_general/imagenes_de_ofertas/sprite.jpeg" alt="Sprite">
+        <h2>Sprite 1,5L</h2>
+        <div class="precio">$6,000</div>
+        <div class="viejo">$7,900</div>
+        <button class="btn-carrito" onclick="event.stopPropagation();">
+            <i class="fa-solid fa-cart-shopping"></i> Agregar
+        </button>
+    </div>
+</div>
+        </section>
+    </main>
+ <footer class="mi-footer">
+        <!-- Nivel 1: Contenedor de columnas principales -->
+        <div class="footer-container">
+            
+            <!-- Columna 1: Legal -->
+            <div class="footer-columna">
+                <h3>Legal</h3>
+                <ul>
+                     <button class="boton-de-arrepentimiento">Boton de arrepentimento</button>
+                    <li><a href="#">Defensa del Consumidor</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Tasas de Interés</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Libro de Quejas</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 2: Institucional -->
+            <div class="footer-columna">
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Sucursales y Horarios</a></li>
+                    <li><a href="#">Trabajá con nosotros</a></li>
+                    <li><a href="#">Proveedores</a></li>
+                    <li><a href="#">Código de ética</a></li>
+                    <li><a href="#">Responsabilidad Social</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Ayuda y Compra -->
+            <div class="footer-columna">
+                <h3>Ayuda y Compra</h3>
+                <ul>
+                    <li><a href="#">¿Cómo comprar?</a></li>
+                    <li><a href="#">Folletos Digitales</a></li>
+                    <li><a href="#">App Noche</a></li>
+                    <li><a href="#">Tarjeta Noche</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Seguridad y Redes -->
+            <div class="footer-columna">
+                <h3>Seguridad y Redes</h3>
+                <p style="font-size: 13px; color: #e2e8f0; margin-bottom: 10px;">
+                    Sitio seguro con encriptación SSL. Tus datos están protegidos.
+                </p>
+                <div style="background: rgba(255,255,255,0.15); padding: 8px; border-radius: 6px; text-align: center; font-size: 11px; color: #fff; font-weight: bold; margin-bottom: 15px;">
+                    [ Sello Data Fiscal AFIP ]
+                </div>
+                
+                <h3 style="font-size: 14px; margin-top: 10px; margin-bottom: 8px;">Redes Sociales</h3>
+                <div class="footer-redes" style="margin-bottom: 10px;">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <p style="font-size: 12px; color: #cbd5e1;">
+                    Atención al cliente: Lunes a Sábados de 8 a 20hs.
+                </p>
+            </div>
+         
+        </div>
+
+        <!-- Nivel 2: Franja inferior estilo Supermercado (Copyright) -->
+        <div class="footer-bottom-bar" style="max-width: 1200px; margin: 30px auto 0 auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <p style="font-size: 12px; color: #cbd5e1; margin: 0;">
+                © 2026 Tu Supermercado. Todos los derechos reservados.
+            </p>
+        </div>
+</footer>
+<!-- MODAL 1: OPCIONES (Pago u otro) -->
+    <div id="miModal" class="modal-overlay">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="btnCerrarModal">&times;</span>
+            <h2><i class="fa-solid fa-wallet" style="color: #3d57c7;"></i> Selecciona una opción</h2>
+            <p>Aquí puedes mostrar las opciones de pago o métodos de envío.</p>
+            <div class="opcion-modal">
+                <i class="fa-solid fa-money-bill-transfer"></i> Efectivo / Transferencia
+            </div>
+            <div class="opcion-modal">
+                <i class="fa-solid fa-credit-card"></i> Tarjeta de Crédito / Débito
+            </div>
+        </div>
+    </div>
+
+    <!-- VENTANA EMERGENTE (MODAL) DE MÉTODOS DE ENTREGA -->
+    <div id="modalEntrega" class="modal-overlay-entrega">
+        <div class="modal-contenido-entrega">
+            <span class="cerrar-modal-entrega">&times;</span>
+            <h2><i class="fa-solid fa-truck-fast" style="color: #3d57c7;"></i> Seleccioná tu método de entrega</h2>
+
+            <div class="opcion-entrega">
+                <h3><i class="fa-solid fa-house-chimney"></i> Envío a domicilio en franjas horarias</h3>
+                <p>Recibís tu compra en tu casa eligiendo un rango de horario específico.</p>
+            </div>
+
+            <div class="opcion-entrega">
+                <h3><i class="fa-solid fa-bolt"></i> Envío rápido o express</h3>
+                <p>Entregas en pocas horas o en minutos para pedidos de menor volumen o urgencias.</p>
+            </div>
+
+            <div class="opcion-entrega">
+                <h3><i class="fa-solid fa-store"></i> Retiro en tienda (Pick up)</h3>
+                <p>Pasás a buscar tu pedido armado por la sucursal sin costo adicional.</p>
+            </div>
+
+            <div class="opcion-entrega">
+                <h3><i class="fa-solid fa-car-side"></i> Retiro al auto (Drive-thru / Al auto)</h3>
+                <p>Te acercas al estacionamiento del supermercado y colocan las compras directamente en tu baúl sin que tengas que bajar.</p>
+            </div>
+        </div>
+    </div>
+
+     <script src="../scripts/header.js"></script>
+     <script src="../scripts/carrusel.js"></script>
+    <script src="../scripts/metododepago.js"></script>
+    <script src="../scripts/metododeentrega.js"></script>
+    <script src="../scripts/categorias.js"></script>
+</body>
+
+</html>

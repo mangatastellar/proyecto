@@ -1,0 +1,118 @@
+/* --- FONDO OSCURO (OVERLAY) --- */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 4000;
+}
+
+.menu-overlay.activo {
+    display: block;
+}
+
+/* --- PANEL DESPLEGABLE MÁS GRANDE Y CÓMODO --- */
+.mega-menu-contenido {
+    position: fixed;
+    top: 0;
+    left: 290px;
+    width: 900px; /* Ancho ampliado */
+    height: 100vh;
+    background: white;
+    padding: 40px;
+    box-shadow: 15px 0 40px rgba(0, 0, 0, 0.3);
+    z-index: 4001;
+    overflow-y: auto;
+}
+
+/* Botón cerrar (la X) más grande */
+.cerrar-mega-menu {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 45px;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+}
+
+.cerrar-mega-menu:hover {
+    color: red;
+}
+
+/* Título principal bien grande */
+.mega-menu-contenido > h2 {
+    font-size: 34px;
+    color: #1d3557;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Grilla */
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Caja de cada categoría */
+.categoria-item {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 8px solid #3d57c7;
+    transition: 0.2s;
+}
+
+.categoria-item:hover {
+    background: #f0f4ff;
+    transform: translateY(-3px);
+}
+
+/* Título de la categoría */
+.categoria-item h3 {
+    font-size: 24px;
+    color: #3d57c7;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.categoria-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Letras de las subcategorías bien grandes y legibles */
+.categoria-item li {
+    font-size: 19px; /* Letra grande para leer sin esfuerzo */
+    color: #1a202c;
+    padding: 8px 0;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.categoria-item li:hover {
+    color: #3d57c7;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+/* Estilo para los títulos de categoría con texto negro y hover sutil */
+.categorias-titulo {
+    color: #000000; /* Negro */
+    font-size: 30px; /* Tamaño de 17 píxeles */
+    transition: color 0.2s ease; /* Transición suave para el efecto */
+}
+
+/* Efecto hover: al pasar el mouse se vuelve casi blanco (un gris ultra claro para que se note sobre el fondo) */
+.categorias-titulo:hover {
+    color: #f0f0f0; 
+}
