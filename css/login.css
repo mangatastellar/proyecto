@@ -1,6 +1,3 @@
-/* ==========================================
-   LOGIN / FORMULARIO / OTROS
-   ========================================== */
 
 body {
     background: #dcedff;
@@ -69,19 +66,18 @@ body {
     height: auto;
 }
 .ingresar {
-    /* Gradiente plateado metalizado brillante */
     background: linear-gradient(180deg, #ffffff 0%, #d4d4d4 40%, #a1a1a1 50%, #e6e6e6 100%);
-    color: #222222;                 /* Texto oscuro para buen contraste */
+    color: #222222;                
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     
     padding: 10px 24px;
-    border-radius: 50px;           /* Bordes súper redondeados estilo cápsula */
+    border-radius: 50px;           
     
-    /* Sin sombras oscuras al borde ni bordes raros */
-    border: 1px solid #b5b5b5;      /* Borde fino plateado */
+  
+    border: 1px solid #b5b5b5;     
     outline: none;
     box-shadow: none;               
     
@@ -89,15 +85,13 @@ body {
     transition: transform 0.15s ease, background 0.2s ease;
 }
 
-/* EFECTO: Al pasar el cursor (Se levanta un poco) */
 .ingresar:hover {
-    transform: translateY(-3px);   /* Se eleva hacia arriba */
-    background: linear-gradient(180deg, #ffffff 0%, #e0e0e0 40%, #b5b5b5 50%, #f0f0f0 100%); /* Brilla un toque más */
+    transform: translateY(-3px);  
+    background: linear-gradient(180deg, #ffffff 0%, #e0e0e0 40%, #b5b5b5 50%, #f0f0f0 100%);
 }
 
-/* EFECTO: Al hacer clic (Se hunde como si fuera apretado) */
 .ingresar:active {
-    transform: translateY(1px) scale(0.98); /* Se baja y se achica levemente */
-    background: linear-gradient(180deg, #a1a1a1 0%, #c4c4c4 50%, #ffffff 100%); /* Invierte el brillo */
-    box-shadow: none;               /* Mantiene el borde sin sombras oscuras */
+    transform: translateY(1px) scale(0.98); 
+    background: linear-gradient(180deg, #a1a1a1 0%, #c4c4c4 50%, #ffffff 100%);
+    box-shadow: none;              
 }

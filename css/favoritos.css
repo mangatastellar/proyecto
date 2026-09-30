@@ -1,9 +1,9 @@
 .seccion-favoritos {
-    text-align: center; /* Centra el texto y los elementos de adentro */
-    margin-top: 50px;   /* Opcional: le da un respiro desde arriba */
+    text-align: center; 
+    margin-top: 50px;   
 }
 
 .seccion-favoritos p {
-    color: #000000;     /* Color negro */
-    font-size: 18px;    /* Opcional: para que se lea bien */
+    color: #000000;     
+    font-size: 18px;    
 }

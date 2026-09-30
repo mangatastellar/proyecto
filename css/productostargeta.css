@@ -1,56 +1,56 @@
 .banner {
     max-width: 900px;     
-    width: 90%;             /* Ahora sí, porcentaje para que sea responsive */
-    height: auto;           /* ¡Clave! Dejamos que la altura sea automática según la proporción de la foto */
-    object-fit: cover;      /* O 'contain' si prefieres que se vea entera, pero 'cover' la recorta prolijo para que llene el banner */
+    width: 90%;            
+    height: auto;          
+    object-fit: cover;      
     display: block;
-    margin: 20px auto;      /* Centrada y con espacio */
+    margin: 20px auto;      
     border-radius: 15px;    
     position: relative;
     z-index: 2;
 }
-/* 1. CONTENEDOR PRINCIPAL DE PRODUCTOS */
+
 .productos,
 .productos-limpieza,
 .productos-bebidas {
     display: flex;
-    flex-wrap: wrap;             /* Permite que si no entran, bajen a la siguiente fila */
-    justify-content: center;     /* Centra las tarjetas en la pantalla */
-    gap: 25px;                   /* Espacio parejo entre tarjeta y tarjeta */
+    flex-wrap: wrap;             
+    justify-content: center;     
+    gap: 25px;                   
     padding: 20px;
-    max-width: 1200px;           /* Evita que se desparramen demasiado en pantallas gigantes */
-    margin: 0 auto;              /* Centra todo el bloque en la página */
+    max-width: 1200px;           
+    margin: 0 auto;             
 }
 
-/* 2. TARJETA (CONTENEDOR BLANCO) */
+
 .card {
     width: 260px;
     background: white;
     padding: 15px;
-    border-radius: 15px;         /* Esquinas redondeadas prolijas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra suave para darle relieve */
+    border-radius: 15px;         
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
     display: flex;
-    flex-direction: column;      /* Alinea imagen, título y precio verticalmente DENTRO de la card */
-    align-items: center;         /* Centra todo el contenido internamente */
+    flex-direction: column;      
+    align-items: center;         
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Efecto de elevación suave al pasar el mouse */
+    transform: translateY(-5px); 
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* 3. IMAGEN DENTRO DE LA TARJETA */
+
 .card img {
     width: 100%;
-    height: 200px;               /* Altura fija controlada */
-    object-fit: contain;        /* Ajusta la foto sin deformarla ni salirse del cuadro blanco */
+    height: 200px;               
+    object-fit: contain;        
     margin-bottom: 10px;
 }
 
-/* 4. TEXTO Y PRECIOS DENTRO DE LA TARJETA */
+
 .card h2 {
     font-size: 20px;
     color: #333;
@@ -61,7 +61,7 @@
     color: #2346d4;
     font-size: 28px;
     font-weight: bold;
-    margin-top: auto;            /* Empuja el precio siempre al fondo de la card */
+    margin-top: auto;            
 }
 
 .viejo {
@@ -71,9 +71,9 @@
     margin-right: 8px;
 }
 
-/* Posición del corazón arriba a la derecha de la card */
+
 .card {
-    position: relative; /* Para poder ubicar el corazón absolutamente */
+    position: relative; 
 }
 
 .btn-favorito {
@@ -88,13 +88,13 @@
     transition: 0.2s;
 }
 
-/* Efecto al pasar el mouse por el corazón */
+
 .btn-favorito:hover {
-    color: #e74c3c; /* Rojo */
+    color: #e74c3c; 
     transform: scale(1.2);
 }
 
-/* Botón de Carrito */
+
 .btn-carrito {
     width: 100%;
     margin-top: 15px;

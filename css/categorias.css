@@ -1,4 +1,4 @@
-/* --- FONDO OSCURO (OVERLAY) --- */
+
 .menu-overlay {
     display: none;
     position: fixed;
@@ -14,12 +14,12 @@
     display: block;
 }
 
-/* --- PANEL DESPLEGABLE MÁS GRANDE Y CÓMODO --- */
+
 .mega-menu-contenido {
     position: fixed;
     top: 0;
     left: 290px;
-    width: 900px; /* Ancho ampliado */
+    width: 900px; 
     height: 100vh;
     background: white;
     padding: 40px;
@@ -28,7 +28,7 @@
     overflow-y: auto;
 }
 
-/* Botón cerrar (la X) más grande */
+
 .cerrar-mega-menu {
     position: absolute;
     top: 25px;
@@ -43,7 +43,7 @@
     color: red;
 }
 
-/* Título principal bien grande */
+
 .mega-menu-contenido > h2 {
     font-size: 34px;
     color: #1d3557;
@@ -53,14 +53,14 @@
     gap: 15px;
 }
 
-/* Grilla */
+
 .grid-categorias {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
-/* Caja de cada categoría */
+
 .categoria-item {
     background: #f8f9fa;
     padding: 25px;
@@ -74,7 +74,7 @@
     transform: translateY(-3px);
 }
 
-/* Título de la categoría */
+
 .categoria-item h3 {
     font-size: 24px;
     color: #3d57c7;
@@ -90,9 +90,9 @@
     margin: 0;
 }
 
-/* Letras de las subcategorías bien grandes y legibles */
+
 .categoria-item li {
-    font-size: 19px; /* Letra grande para leer sin esfuerzo */
+    font-size: 19px; 
     color: #1a202c;
     padding: 8px 0;
     cursor: pointer;
@@ -105,14 +105,14 @@
     padding-left: 8px;
 }
 
-/* Estilo para los títulos de categoría con texto negro y hover sutil */
+
 .categorias-titulo {
-    color: #000000; /* Negro */
-    font-size: 30px; /* Tamaño de 17 píxeles */
-    transition: color 0.2s ease; /* Transición suave para el efecto */
+    color: #000000; 
+    font-size: 30px; 
+    transition: color 0.2s ease; 
 }
 
-/* Efecto hover: al pasar el mouse se vuelve casi blanco (un gris ultra claro para que se note sobre el fondo) */
+
 .categorias-titulo:hover {
     color: #f0f0f0; 
 }

@@ -1,5 +1,4 @@
-/* Fondo oscuro transparente que cubre toda la pantalla */
-/* Fondo oscuro transparente que cubre toda la pantalla */
+
 .modal-overlay {
     display: none;
     position: fixed;
@@ -13,13 +12,12 @@
     align-items: center;
 }
 
-/* Caja blanca central - ¡Ahora mucho más grande y ancha! */
 .modal-contenido {
     background: white;
     padding: 60px 70px;
     border-radius: 30px;
     width: 92%;
-    max-width: 1100px; /* Ancho imponente en pantalla */
+    max-width: 1100px;
     text-align: center;
     position: relative;
     box-shadow: 0 15px 40px rgba(0,0,0,0.6);
@@ -27,7 +25,6 @@
     overflow-y: auto;
 }
 
-/* Botón para cerrar la ventana (la X) */
 .cerrar-modal {
     position: absolute;
     top: 25px;
@@ -42,7 +39,6 @@
     color: red;
 }
 
-/* Opciones de pago grandes y cómodas */
 .opcion-modal {
     background: #f0f4ff;
     padding: 30px 35px;
@@ -68,7 +64,6 @@
     color: white !important;
 }
 
-/* Títulos principales bien grandes */
 .modal-contenido h2 {
     font-size: 46px;
     margin-bottom: 15px;
@@ -81,11 +76,8 @@
     font-size: 22px;
 }
 
-/* --- NUEVO MODAL: MÉTODOS DE ENTREGA --- */
-
-/* Fondo oscuro transparente (puedes reutilizar .modal-overlay si ya lo tienes) */
 .modal-overlay-entrega {
-    display: none; /* Arranca oculta */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
@@ -97,26 +89,23 @@
     align-items: center;
 }
 
-/* Caja blanca central gigante para las entregas */
 .modal-contenido-entrega {
     background: white;
     padding: 120px;
     border-radius: 25px;
     width: 95%;
-    max-width: 1300px; /* Un poquito más ancho para que entren bien los textos largos */
+    max-width: 1300px; 
     text-align: center;
     position: relative;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* Título del modal de entrega */
 .modal-contenido-entrega h2 {
     font-size: 50px;
     margin-bottom: 30px;
     color: #1a1a1a;
 }
 
-/* Botón para cerrar la ventana (la X) */
 .cerrar-modal-entrega {
     position: absolute;
     top: 20px;
@@ -131,13 +120,12 @@
     color: red;
 }
 
-/* Estilo para cada opción de entrega */
 .opcion-entrega {
     background: #f0f4ff;
     padding: 25px 30px;
     margin: 15px 0;
     border-radius: 15px;
-    text-align: left; /* Alineado a la izquierda para leer mejor las descripciones */
+    text-align: left;
     cursor: pointer;
     transition: 0.2s;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -149,7 +137,6 @@
     transform: scale(1.02);
 }
 
-/* Título dentro de la opción (ej: Envío a domicilio) */
 .opcion-entrega h3 {
     font-size: 30px;
     margin: 0 0 10px 0;
@@ -157,10 +144,9 @@
 }
 
 .opcion-entrega:hover h3 {
-    color: white; /* Para que cambie a blanco cuando pasas el mouse */
+    color: white; 
 }
 
-/* Descripción de la opción (el texto chiquito pero legible) */
 .opcion-entrega p {
     font-size: 20px;
     margin: 0;
@@ -168,5 +154,5 @@
 }
 
 .opcion-entrega:hover p {
-    color: #e0e0e0; /* Cambio de color sutil al pasar el mouse */
+    color: #e0e0e0; 
 }

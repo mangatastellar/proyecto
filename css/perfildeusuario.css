@@ -16,12 +16,13 @@
 
 body {
     margin: 0;
-    padding: 0; /* <--- Quitamos el padding global del body */
+    padding: 0; 
+    
 }
 
 main {
     margin-top: 140px;
-    padding: 20px; /* <--- El espacio de respiro se lo damos solo al contenido principal */
+    padding: 20px;
 }
 
 .container {
@@ -29,7 +30,6 @@ main {
     margin: 0 auto;
 }
 
-/* Círculo superior para el icono de usuario vacío */
 .user-avatar-container {
     display: flex;
     justify-content: center;
@@ -67,7 +67,6 @@ main {
     gap: 12px;
 }
 
-/* Rectángulos limpios sin borde lateral de color */
 .menu-item {
     background: var(--card-bg);
     padding: 16px 20px;
