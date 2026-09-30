@@ -1,22 +1,12 @@
 async function iniciarSesion() {
     const usuario = document.getElementById("usuario").value;
-    const clave = document.getElementById("clave").value;
+    const clave = document.getElementById("contrasena").value;
 
-    const respuesta = await fetch("/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ usuario, clave })
-    });
-
-    const datos = await respuesta.json();
-
-    if (datos.exito) {
-        alert("Bienvenido");
+    if (usuario === "admin" && clave === "1234"){
+        alert("bienvenido");
         window.location.href = "index.html";
-    } else {
-        alert("Usuario o contraseña incorrectos");
+    }else{
+        alert("usuario o contraseña incorrectos");
     }
 }
 $(document).ready(function () {
