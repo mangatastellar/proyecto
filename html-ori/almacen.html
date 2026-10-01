@@ -321,17 +321,16 @@
             </p>
         </div>
 </footer>
+<div id="miModal" class="modal-overlay">
+    <div class="modal-contenido">
+        <span class="cerrar-modal" id="btnCerrarModal">&times;</span>
 
-   
-    <div id="miModal" class="modal-overlay">
-        <div class="modal-contenido">
-            <span class="cerrar-modal" id="btnCerrarModal">&times;</span>
-            
+        
+        <div id="vistaPrincipal" class="modal-vista active">
             <h2><i class="fa-solid fa-wallet" style="color: #3d57c7;"></i> Medios de Pago Disponibles</h2>
             <p>Aboná de forma segura con cualquiera de nuestras opciones habilitadas.</p>
-            
-            
-            <div class="opcion-modal">
+
+            <div class="opcion-modal" data-target="detalleQr">
                 <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 10px;">
                     <i class="fa-solid fa-qrcode" style="font-size: 34px; color: #3d57c7;"></i>
                     <strong style="font-size: 26px; color: #1a1a1a;">Billeteras Virtuales y QR</strong>
@@ -341,8 +340,7 @@
                 </span>
             </div>
 
-            
-            <div class="opcion-modal">
+            <div class="opcion-modal" data-target="detalleTarjetas">
                 <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 10px;">
                     <i class="fa-solid fa-credit-card" style="font-size: 34px; color: #3d57c7;"></i>
                     <strong style="font-size: 26px; color: #1a1a1a;">Tarjetas de Débito y Crédito</strong>
@@ -352,8 +350,7 @@
                 </span>
             </div>
 
-            
-            <div class="opcion-modal">
+            <div class="opcion-modal" data-target="detalleEfectivo">
                 <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 10px;">
                     <i class="fa-solid fa-money-bill-transfer" style="font-size: 34px; color: #3d57c7;"></i>
                     <strong style="font-size: 26px; color: #1a1a1a;">Efectivo / Transferencia Bancaria</strong>
@@ -363,8 +360,98 @@
                 </span>
             </div>
         </div>
+
+        
+        <div id="detalleQr" class="modal-vista">
+            <button class="btn-volver"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+            <h2>Billeteras Virtuales y QR</h2>
+            <p>Escaneá desde la app de tu preferencia. Aceptamos Mercado Pago, MODO y Cuenta DNI.</p>
+            <div style="padding: 20px; background: #f8f9fa; border-radius: 15px;">
+                <i class="fa-solid fa-qrcode" style="font-size: 100px; color: #3d57c7;"></i>
+                <p style="margin-top: 15px; font-weight: bold;">Alias: TU.ALIAS.AQUI</p>
+            </div>
+        </div>
+
+        
+        <div id="detalleTarjetas" class="modal-vista">
+            <button class="btn-volver"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+            
+            <h2 style="margin-bottom: 5px;"><i class="fa-solid fa-credit-card" style="color: #3d57c7;"></i> Tarjeta de Crédito / Débito</h2>
+            <p style="margin-bottom: 25px; font-size: 16px;">Ingresá los datos de tu tarjeta de forma 100% segura.</p>
+
+            <div class="tarjeta-contenedor">
+                
+                <div class="tarjeta-tarjeta">
+                    <div class="tarjeta-header">
+                        <span class="chip-tarjeta"></span>
+                        <div class="logo-mastercard">
+                            <div class="circle red"></div>
+                            <div class="circle yellow"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tarjeta-numero" id="previewNumero">•••• •••• •••• ••••</div>
+                    
+                    <div class="tarjeta-footer">
+                        <div class="tarjeta-grupo">
+                            <small>Titular</small>
+                            <div class="tarjeta-nombre" id="previewNombre">NOMBRE Y APELLIDO</div>
+                        </div>
+                        <div class="tarjeta-grupo">
+                            <small>Vence</small>
+                            <div class="tarjeta-vencimiento" id="previewExp">MM/AA</div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <form id="formTarjeta" class="form-tarjeta" onsubmit="event.preventDefault();">
+                    <div class="input-grupo">
+                        <label for="numeroTarjeta">Número de Tarjeta</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="numeroTarjeta" placeholder="1234 5678 9101 1121" maxlength="19" required>
+                            <i class="fa-brands fa-cc-mastercard icono-input"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-grupo">
+                        <label for="nombreTarjeta">Nombre impreso en la tarjeta</label>
+                        <input type="text" id="nombreTarjeta" placeholder="JUAN PEREZ" required>
+                    </div>
+
+                    <div class="input-fila">
+                        <div class="input-grupo">
+                            <label for="expTarjeta">Vencimiento</label>
+                            <input type="text" id="expTarjeta" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                        <div class="input-grupo">
+                            <label for="cvcTarjeta">CVC / CVV</label>
+                            <input type="password" id="cvcTarjeta" placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-pagar">
+                        <i class="fa-solid fa-lock"></i> Pagar con Mastercard
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        
+        <div id="detalleEfectivo" class="modal-vista">
+            <button class="btn-volver"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+            <h2>Efectivo / Transferencia</h2>
+            <p>Datos para transferencia bancaria:</p>
+            <div style="text-align: left; background: #f0f4ff; padding: 20px; border-radius: 15px; font-size: 18px;">
+                <p style="margin-bottom: 8px;"><strong>CBU:</strong> 0000003100000000000000</p>
+                <p style="margin-bottom: 8px;"><strong>Alias:</strong> MI.TIENDA.PAGO</p>
+                <p style="margin-bottom: 0;"><strong>Titular:</strong> Mi Empresa S.A.</p>
+            </div>
+        </div>
+
     </div>
-    
+</div>
+</div>
     <div id="modalEntrega" class="modal-overlay-entrega">
         <div class="modal-contenido-entrega">
             <span class="cerrar-modal-entrega">&times;</span>
